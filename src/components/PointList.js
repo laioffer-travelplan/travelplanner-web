@@ -11,7 +11,7 @@ class SatelliteList extends Component {
                 </div>
                 <hr/>
                 <div>Route</div>
-                <div> <Save /> </div>
+                <div> <SavePlan /> </div>
             </div>
         );
     }
