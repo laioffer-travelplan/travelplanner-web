@@ -17,7 +17,7 @@ const Saveplan = (data) => {
     return (
         <>
             <Button type="primary" onClick={showModal}>
-                Open Modal
+                Save Plan
             </Button>
             <Modal title="Congratulations" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} >
                 <p>You has successfully saved this travel plan!</p>
