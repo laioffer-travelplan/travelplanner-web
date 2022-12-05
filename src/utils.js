@@ -41,7 +41,7 @@ return fetch("/cart").then((response) => {
 });
 };
 
-export const save = (data) => {
+export const savePlan = (data) => {
     const saveUrl = "/addplan";
 
     return fetch(saveUrl, {
