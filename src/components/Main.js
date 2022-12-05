@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { Route, Switch, Redirect} from "react-router";
 import Login from './Login';
 import Register from './Register';
@@ -6,18 +6,19 @@ import Home from './Home';
 
 function Main(props){
   const { isLoggedIn, handleLoggedIn } = props;
+  const [authed, setAuthed] = useState(false);
 
   const showLogin = () => {
-    return isLoggedIn ? (
+    return authed ? (
     <Redirect to="/home" />
       ) : (
-    <Login handleLoggedIn={handleLoggedIn} />
+    <Login onSuccess={() => setAuthed(true)} />
   );
 };
 
-//   const showHome = () => {
-//     return isLoggedIn ? <Home /> : <Redirect to="/login" />;
-// };
+  const showHome = () => {
+    return isLoggedIn ? <Home /> : <Redirect to="/login" />;
+};
 
     return (
       <div className="main">
@@ -25,7 +26,7 @@ function Main(props){
           <Route path="/" exact render={showLogin} />
           <Route path="/login" render={showLogin} />
           <Route path="/register" component={Register} />
-          <Route path="/home" component={Home} />
+          <Route path="/home" render={showHome} />
         </Switch>
       </div>
     )

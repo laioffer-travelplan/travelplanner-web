@@ -3,37 +3,26 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, message } from 'antd';
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {BASE_URL} from "../constants";
+// import {BASE_URL} from "../constants";
+import { login } from "../utils";
 
 function Login(props) {
-  const { handleLoggedIn } = props;
-
-  const onFinish = (values) => {
-    const { username, password } = values;
-
-    const opt = {
-      method: "POST",
-      url: `${BASE_URL}/signin`,
-      data: {
-      username: username,
-      password: password
-      },
-      headers: { "Content-Type": "application/json" }
-    }
-
-    axios(opt)
-      .then((res)=>{
-        if (res.status===200){
-          const{data} =res
-          handleLoggedIn(data);
-          message.success("Login succeed! ");
-        }
+  const { handleLoggedIn, onSuccess } = props;
+  console.log(handleLoggedIn)
+  const onFinish = (data) => {
+    
+    login(data)
+      .then((res) => {
+        handleLoggedIn();
+        message.success(`Login Successful`);
+        onSuccess();
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.log("login failed: ", err.message);
-        message.error("Login failed!");
-      })  
+        message.error(err.message);
+      })
   };
+  
     return (
       <Form
       name="normal_login"

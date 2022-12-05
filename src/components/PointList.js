@@ -6,11 +6,11 @@ class SatelliteList extends Component {
             <div className="point-list-box">
                 <div className="btn-container">
                     <button
-                        className="sat-list-btn"
-                    >Show on map</button>
+                        className="save-btn"
+                    >save</button>
                 </div>
                 <hr/>
-                <div>data</div>
+                <div>Route</div>
             </div>
         );
     }
