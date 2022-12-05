@@ -7,11 +7,11 @@ class SatelliteList extends Component {
                 <div className="btn-container">
                     <button
                         className="save-btn"
-                    >save</button>
+                    > <SavePlan /> </button>
                 </div>
                 <hr/>
                 <div>Route</div>
-                <div> <SavePlan /> </div>
+              
             </div>
         );
     }
