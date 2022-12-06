@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {List, Avatar, Button, Checkbox} from 'antd'; 
 import choice from "../assets/images/choice_img.svg";
+<<<<<<< HEAD
 
 class Choice extends Component{
     state = {
@@ -49,6 +50,18 @@ class Choice extends Component{
         // console.log(this.props.CityInfo?.[0]?.pointOfInterest)
         const { selected } = this.state;
         
+=======
+import axios from 'axios';
+
+class Choice extends Component{
+    
+    onShowGoogleMap = ()=>{
+        //send this selected arr to the Main for data communication
+        this.props.onshowMap(this.state.selected); 
+    }
+    
+    render(){
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
     return (
             <div>
                 Please make a selection
@@ -57,24 +70,37 @@ class Choice extends Component{
                     className="choice-list"
                     itemLayout="horizontal"
                     size="small"
+<<<<<<< HEAD
                     dataSource={ChoiceList}   
+=======
+                    // dataSource={satList}
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
                     renderItem={item => (
                         <List.Item
                             actions={[<Checkbox dataInfo={item} onChange={this.onChange}/>]}
                         >
                             <List.Item.Meta
                                 avatar={<Avatar size={50} src={choice} />}
+<<<<<<< HEAD
                                 title={<p>{item.point_name}</p>}
                                 description={`Description: ${item.description}`}
+=======
+                                title={<p>{item.name}</p>}
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
                             />
                         </List.Item>
                     )}
                 />
                 <Button className="choice-list-btn"
                         type="primary"
+<<<<<<< HEAD
                         //disable button if selected list is null
                         disabled={ selected.length === 0}
                         onClick={this.onShowGMap}
+=======
+                        // disabled={ selected.length === 0}
+                        onClick={this.onShowGoogleMap}
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
                 >Show on Map</Button>
             </div>
                 

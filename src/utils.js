@@ -41,6 +41,7 @@ return fetch("/cart").then((response) => {
 });
 };
 
+<<<<<<< HEAD
 export const getcity = () => {
     return fetch("/city").then((response) => {
         if (response.status < 200 || response.status >= 300) {
@@ -51,3 +52,20 @@ export const getcity = () => {
     });
     };
 
+=======
+export const savePlan = (data) => {
+    const saveUrl = "/addplan";
+
+    return fetch(saveUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    }).then((response) => {
+        if (response.status < 200 || response.status >= 300) {
+            throw Error("Fail to save this plan!");
+        }
+    });
+};
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1

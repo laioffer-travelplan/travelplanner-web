@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve">  <image id="image0" width="96" height="96" x="0" y="0"
@@ -41,4 +42,9 @@ f38fjov+YmeUajXEcwB2R3KPUPqD37+/2cr/4hT89BbTn51q6o3IZponLxq7VDDDsUJNI4000kgj
 jTTSSCPh+BcLUOvAE5BGJAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0xMi0wNVQyMDoyNjozOSsw
 MDowMOZNAMgAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMTItMDVUMjA6MjY6MzkrMDA6MDCXELh0
 AAAAAElFTkSuQmCC" />
+=======
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+<path style="fill:#010101; stroke:none;" d="M0 0L0 30L30 30L30 0L0 0z"/>
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
 </svg>

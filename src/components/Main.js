@@ -12,7 +12,11 @@ function Main(props){
     return authed ? (
     <Redirect to="/home" />
       ) : (
+<<<<<<< HEAD
     <Login handleLoggedIn ={handleLoggedIn} onSuccess={() => setAuthed(true)} />
+=======
+    <Login onSuccess={() => setAuthed(true)} />
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
   );
 };
 

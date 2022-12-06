@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { login } from "../utils";
 
 function Login(props) {
+<<<<<<< HEAD
   const { handleLoggedIn, onSuccess } = props;
   console.log(handleLoggedIn)
   const onFinish = (data) => {
@@ -15,6 +16,18 @@ function Login(props) {
         handleLoggedIn();
         message.success(`Login Successful`);
         onSuccess();
+=======
+  const { handleLoggedIn } = props;
+
+  const onFinish = (data) => {
+    
+    login(data)
+      .then((res) => {
+        const { data } = res;
+        handleLoggedIn(data);
+        message.success(`Login Successful`);
+        //this.props.onSuccess();
+>>>>>>> 53214a21db3af415f75ab207cd5d523da773a0a1
       })
       .catch((err) => {
         console.log("login failed: ", err.message);
