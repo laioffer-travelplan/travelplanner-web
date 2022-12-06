@@ -11,7 +11,7 @@ import {getcity, getCart} from '../utils';
 function Home () {
   const [city, setCity] = useState();
   const [interest, setInterest] =useState([])
-  
+  const pointList = useState([])
 
   useEffect(() => {
     getcity()
@@ -36,23 +36,18 @@ function Home () {
   
   const showMap = (data) => {
     console.log('show on the map -> ', data);
+    this.setState(preState => ({
+      ...preState,
+      pointList: [...data]
+  }))
   }
 
     return (
       <Row className='main'>
-<<<<<<< Updated upstream
-          <Col span={8} className="left-side">
-              <Choice/>
-              <PointList/>
-          </Col>
-          <Col span={16} className="right-side">
-              <Map/>
-          </Col>
-=======
         <Col span={8} className="left-side">
           <Choice 
                   CityInfo={city}
-                  onShowMap={showMap}
+                  onShowMap={pointList}
           />
           <PointList 
                   PointInfo ={showMap}
@@ -60,9 +55,7 @@ function Home () {
         </Col>
         <Col span={16} className="right-side">
           <Map />
-
         </Col>
->>>>>>> Stashed changes
       </Row>
     );
   }

@@ -10,7 +10,6 @@ function Login(props) {
   const { handleLoggedIn, onSuccess } = props;
   console.log(handleLoggedIn)
   const onFinish = (data) => {
-    
     login(data)
       .then((res) => {
         handleLoggedIn();

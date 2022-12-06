@@ -40,3 +40,14 @@ return fetch("/cart").then((response) => {
     return response.json();
 });
 };
+
+export const getcity = () => {
+    return fetch("/city").then((response) => {
+        if (response.status < 200 || response.status >= 300) {
+        throw Error("Fail to get palns");
+        }
+    
+        return response.json();
+    });
+    };
+

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import { Divider } from 'antd';
 
-class SatelliteList extends Component {
+class PointList extends Component {
     render() {
         return (
             <div className="point-list-box">
@@ -10,10 +11,16 @@ class SatelliteList extends Component {
                     >save</button>
                 </div>
                 <hr/>
-                <div>Route</div>
+                <div>
+                    <>
+                        <p>
+                            
+                        </p>
+                    </>
+                </div>
             </div>
         );
     }
 }
 
-export default SatelliteList;
+export default PointList;
